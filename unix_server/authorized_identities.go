@@ -38,7 +38,7 @@ type PubKeyIdentity struct {
 }
 
 func DefaultIdentitiesFileNames(user *unix_util.User) []string {
-	return []string{path.Join(user.Dir, ".ssh3", "authorized_identities"), path.Join(user.Dir, ".ssh", "authorized_keys")}
+	return []string{path.Join(user.Dir, ".ssh", "authorized_keys")}
 }
 
 func (i *PubKeyIdentity) Verify(genericCandidate interface{}, base64ConversationID string) bool {
